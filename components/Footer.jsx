@@ -5,18 +5,18 @@ import React from 'react'
 function Footer() {
   return (
     <>
-      <footer className="bg-[#af8260ce]">
+      <footer className="bg-[#af8260] text-[12px]">
         <div className="relative mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 lg:pt-24">
           <div className="absolute end-4 top-4 sm:end-6 sm:top-6 lg:end-8 lg:top-8">
             <a
-            className="inline-block rounded-full bg-[#0D68A0] p-2 text-white shadow transition hover:bg-[#094469] sm:p-3 lg:p-4"
+            className="inline-block rounded-full bg-[#0D68A0] p-3 text-white shadow transition hover:bg-[#094469] sm:p-6 lg:p-8"
               href="#"
             >
               <span className="sr-only">Back to top</span>
 
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="size-5"
+                className="size-8"
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >

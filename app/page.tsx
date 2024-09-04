@@ -4,7 +4,9 @@ import Link from "next/link";
 import Image from "next/image";
 // import ImageComposition from "@/components/ImageComposition/ImageComposition";
 // import Card from "@/components/Card/Card";
-// import { ranges } from "@/contants/data";
+import { ranges } from "@/contants/data";
+import ImageComposition from "@/components/ImageComposition/ImageComposition";
+import Card from "@/components/Card/Card";
 // import Logo from "@/components/Logo/Logo";
 
 export default function Home() {
@@ -34,43 +36,6 @@ export default function Home() {
 
   return (
     <main className="main">
-
-    <div className="relative h-screen bg-blue-500">
-      {/* Background Image */}
-      <Image
-        src="/path-to-your-image.jpg" 
-        alt="Hero Background" 
-        className="absolute inset-0 object-cover w-full h-full" 
-      />
-
-      {/* Wavy SVG */}
-      <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0]">
-        <svg 
-          viewBox="0 0 1440 320" 
-          className="relative block w-full h-64"
-        >
-          <path 
-            fill="#fff" 
-            d="M0,160L80,186.7C160,213,320,267,480,256C640,245,800,171,960,144C1120,117,1280,139,1360,149.3L1440,160L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
-          </path>
-        </svg>
-      </div>
-
-      {/* Content in Hero Section */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
-        <h1 className="text-5xl font-bold">Welcome to Our Website</h1>
-        <p className="mt-4 text-xl">We bring the best products to you.</p>
-        <button className="px-8 py-3 mt-6 text-lg font-semibold text-blue-500 bg-white rounded-full">
-          Shop Now
-        </button>
-      </div>
-    </div>
-
-      {/* <Logo src="/images/nutberry.svg" /> */}
-
-
-      
-
       <section className="header h-screen md:opacity-100">
         <div className="header__text-box text-center">
           <h1 className="text-slate-200 md:font-normal font-semibold -mt-16">
@@ -115,7 +80,7 @@ export default function Home() {
             </p>
           </div>
           <div className="area-2 md:w-[45%] w-[75%] mx-auto md:mt-40 mb-10">
-            {/* <ImageComposition /> */}
+            <ImageComposition />
           </div>
         </div>
       </section>
@@ -155,30 +120,30 @@ export default function Home() {
           })}
         </div>
       </section>
-      <section className="bg-yellow-100" id="grading">
+      <section className="bg-white" id="grading">
         <div className="text-center">
           <h2 className="heading-secondary md:text-6xl text-4xl my-[10rem] uppercase inline-block text-transparent tracking-wide mx-auto">
             Cashew Grades
           </h2>
         </div>
         <div className="flex flex-wrap">
-          <div className="container mx-auto grid lg:grid-cols-3 gap-20 sm:grid-cols-2  grid-cols-1">
+          <div className="container my-20 mx-auto grid lg:grid-cols-3 gap-20 sm:grid-cols-2 grid-cols-1">
             {gradeNamesWholes.map((grade, index) => (
               <div key={index} className="">
-                {/* <Card Title={grade.Title} /> */}
+                <Card Title={grade.Title} />
               </div>
             ))}
           </div>
 
-          <div className="container my-20 mx-auto grid lg:grid-cols-3 gap-20 sm:grid-cols-2 grid-cols-1 ">
+          <div className="container my-20 mx-auto grid lg:grid-cols-3 gap-20 sm:grid-cols-2 grid-cols-1">
             {gradeNamesPieces.map((grade, index) => (
               <div key={index} className="">
-                {/* <Card Title={grade.Title} /> */}
+                <Card Title={grade.Title} />
               </div>
             ))}
           </div>
           <div className="text-center py-20 mx-auto">
-            <div className="discover-tours mb-60">
+            <div className="discover-tours mb-10">
               <a
                 href="/Grading-Chart-cashew.pdf"
                 className="btn btn--brown"
@@ -187,8 +152,6 @@ export default function Home() {
                 Get the PDF of Grading
               </a>
             </div>
-
-            <hr />
           </div>
         </div>
       </section>
